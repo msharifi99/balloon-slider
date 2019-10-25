@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  padding: 50px 0;
+}
+
+.slider__line {
+  width: 500px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #c9d4e7;
+  overflow: hidden;
+}
+
+.slider__filled {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  border-radius: 2px;
+
+  background-color: #4531e3;
+}
+
+.slider__circle {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50% ,-50%);
+}
+
+.dragger__resizer {
+  transition: transform 300ms linear;
+}
+
+.dragger__drawer {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 8px solid #4531e3;
+  
+  background-color: white;
+}
+
+.dragger__drawer:active {
+  border-width: 1px;
+}
+
+
+.balloon {
+  transition: transform 100ms ease-out;
+  position: absolute;
+  top: -50px;
+  transform: translateX(-50%);
+}
+.balloon__resizer {
+  transform-origin: bottom;
+}
+
+.balloon__rotator {
+  transform-origin: bottom;
+  transition: transform 500ms ease-out;
+}
+.balloon__drawer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balloon__circle {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20%;
+  background-color: #5030E3;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 5px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.balloon__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  transform: rotate(-45deg);
+
+}
+
+.balloon__triangle {
+	position: relative;
+  background-color: #5030E3;
+}
+.balloon__triangle:before,
+.balloon__triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.balloon__triangle,
+.balloon__triangle:before,
+.balloon__triangle:after {
+	width:  5px;
+	height: 5px;
+	border-top-right-radius: 30%;
+}
+
+.balloon__triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.balloon__triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.balloon__triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}

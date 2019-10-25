@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slider Animation</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="balloon">
+        <div class="balloon__rotator">
+          <div class="balloon__resizer">
+            <div class="balloon__drawer">
+                <div class="balloon__circle">
+                  <div class="balloon__text"></div>
+                </div>
+                <div class="balloon__triangle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__line">
+          <div class="slider__filled"></div>
+        </div>
+        <div class="slider__circle dragger" draggable="false">
+          <div class="dragger__resizer">
+              <div class="dragger__drawer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

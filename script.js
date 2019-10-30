@@ -109,13 +109,14 @@
 
   function resetElements() {
     elements.balloon.rotator.style.transform = "rotate(0deg)";
-    elements.dragger.resizer.style.transform = "scale(1)";
+    const draggerSize = elements.dragger.isSelected ? 1.7 : 1;
+    elements.dragger.resizer.style.transform = `scale(${draggerSize})`;
   }
   function updateSlider(state) {
     elements.filler.style.transform = `translate(${state.position - elements.slider.getSliderWidth()}px)`;
     elements.dragger.locator.style.transform = `translate(${state.position -
       12}px , -50%)`; // dragger width is 24 px -> state.position - 12 = calc(state.position - 50%);
-    elements.dragger.resizer.style.transform = `scale(1.5)`;
+    elements.dragger.resizer.style.transform = `scale(1.3)`;
   }
 
   function updateBalloon(state) {
